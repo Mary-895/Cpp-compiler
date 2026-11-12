@@ -1,0 +1,11 @@
+workflows:
+  cpp-build:
+    name: Compile C++
+    instance_type: mac_mini_m2
+    scripts:
+      - name: Compile and run
+        script: |
+          clang++ main.cpp -o my_program
+          ./my_program
+    artifacts:
+      - my_program
